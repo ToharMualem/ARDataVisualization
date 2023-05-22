@@ -9,11 +9,23 @@ namespace ARDataVisualization
 {
     public class TreeVisualization : MonoBehaviour
     {
+        [Header("Read Data Source")]
         [SerializeField]
         private string dataFilePath = "";
 
+        [Header("Leaf Prefabs")]
+        [SerializeField] private GameObject toggleLeaf;
+
+        [Header("Positioning Settings")]
+        [SerializeField] private Vector3 firstTreePosition;
+        [SerializeField] private Vector3 offsetTreePosition;
+
+
         private DataTable data;
         private List<TreeNode> dataTrees = new List<TreeNode>();
+        private List<GameObject> treesObj = new List<GameObject>();
+
+
 
         // Start is called before the first frame update
         private void Start()
@@ -29,6 +41,7 @@ namespace ARDataVisualization
 
         private void GenerateTrees()
         {
+            treesObj.Clear();
             dataTrees.Clear();
             DataRowCollection rows = data.Rows;
             for(int rowIndex = 0; rowIndex < rows.Count; rowIndex++)
@@ -61,6 +74,37 @@ namespace ARDataVisualization
                     }
                 }
             }
+
+            Vector3 place = firstTreePosition;
+            foreach (TreeNode tree in dataTrees)
+            {
+                GameObject treeObj = CreateTreeLeaf(tree, place, null);
+                place += offsetTreePosition;
+                treesObj.Add(treeObj);
+            }
+
+        }
+
+        public GameObject CreateTreeLeaf(TreeVisualization.TreeNode node, Vector3 instantiatePlace, GameObject fatherLeaf)
+        {
+            //Right now it creates only toggle leafs
+            GameObject leaf = null;
+            if(fatherLeaf != null)
+            {
+                leaf = Instantiate(toggleLeaf, fatherLeaf.transform, false);
+                leaf.transform.localPosition = instantiatePlace;
+            }
+            else
+            {
+                leaf = Instantiate(toggleLeaf, instantiatePlace, Quaternion.identity);
+            }
+            TreePressableToggleLeaf pressableToggleLeaf = leaf.GetComponent<TreePressableToggleLeaf>();
+            //if(pressableToggleLeaf != null )
+            {
+                pressableToggleLeaf.InitializeLeaf(node, this, fatherLeaf);
+            }
+
+            return leaf;
 
         }
 
