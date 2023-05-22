@@ -111,22 +111,22 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0.0001, y: 0, z: 0}
-  - {x: 0.066753335, y: 0, z: 0}
-  - {x: 0.13340667, y: 0, z: 0}
-  - {x: 0.20006, y: 0, z: 0}
-  - {x: 0.26671335, y: 0, z: 0}
-  - {x: 0.33336666, y: 0, z: 0}
-  - {x: 0.40002, y: 0, z: 0}
-  - {x: 0.4666733, y: 0, z: 0}
-  - {x: 0.5333267, y: 0, z: 0}
-  - {x: 0.59998, y: 0, z: 0}
-  - {x: 0.66663337, y: 0, z: 0}
-  - {x: 0.7332867, y: 0, z: 0}
-  - {x: 0.79994, y: 0, z: 0}
-  - {x: 0.8665933, y: 0, z: 0}
-  - {x: 0.9332467, y: 0, z: 0}
-  - {x: 0.9999, y: 0, z: 0}
+  - {x: 1074.6766, y: 0.31838858, z: -0.5949112}
+  - {x: 716759.3, y: 0.2971648, z: -0.5552544}
+  - {x: 1432444, y: 0.275941, z: -0.51559764}
+  - {x: 2148128.5, y: 0.25471723, z: -0.47594085}
+  - {x: 2863813.5, y: 0.23349343, z: -0.43628407}
+  - {x: 3579497.8, y: 0.21226966, z: -0.3966273}
+  - {x: 4295182.5, y: 0.19104588, z: -0.35697052}
+  - {x: 5010867, y: 0.1698221, z: -0.31731376}
+  - {x: 5726552, y: 0.14859831, z: -0.27765694}
+  - {x: 6442236.5, y: 0.12737453, z: -0.23800018}
+  - {x: 7157921.5, y: 0.10615074, z: -0.19834338}
+  - {x: 7873606, y: 0.08492696, z: -0.15868661}
+  - {x: 8589290, y: 0.06370319, z: -0.11902984}
+  - {x: 9304975, y: 0.042479414, z: -0.07937308}
+  - {x: 10020660, y: 0.021255622, z: -0.039716274}
+  - {x: 10736344, y: 0.000031847325, z: -0.000059506943}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.01
@@ -292,7 +292,7 @@ MonoBehaviour:
   roundedEdges: 1
   roundedCaps: 1
   fadeLineBrightnessOnEnable: 1
-  fadeLinePercentage: 0.55
+  fadeLinePercentage: 0.801
   fadeLineAnimationTime: 0.65
   lineRenderer: {fileID: 7783844539666175025}
   tileMaterialByWorldLength: 0
@@ -347,7 +347,7 @@ MonoBehaviour:
   fontSize: 30
   attachPointType: 9
   attachPointOffset: {x: 0, y: 0, z: 0}
-  toolTipLine: {fileID: 0}
+  toolTipLine: {fileID: 1958250741725040592}
 --- !u!114 &1958250741725040592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,10 +403,10 @@ MonoBehaviour:
     m_RotationOrder: 4
   uniformDistortionStrength: 1
   startPoint:
-    position: {x: 0, y: 0, z: 0}
+    position: {x: 0.93496704, y: 0.3184204, z: -0.5949707}
     rotation: {x: 0, y: 0, z: 0, w: 1}
   endPoint:
-    position: {x: 1, y: 0, z: 0}
+    position: {x: 10737418, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &3832496886971772422
 GameObject:
